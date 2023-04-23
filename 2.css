@@ -1,0 +1,38 @@
+/* h1{
+     text-align: center; 
+     padding-top: 30px; 
+    margin-left: 100px;
+} */
+button{
+    position: relative;
+    left: 100px;
+    width: 5%;
+    height: 30px;
+    margin-left: 100px;
+    /* text-align: center; */
+}
+ h3{
+    /* text-align: center; */
+    position: relative;
+    /* padding-top: 30px; */
+    /* left:100px; */
+}
+span{
+    position: relative;
+    padding-top: 30px;
+    /* left: -320px; */
+} 
+.x{
+    position: relative;
+    /* right:10px; */
+    margin-left: 100px;
+}
+.abc{
+    position: relative;
+    top:180px;
+    margin-left: 200px;
+}
+.a{
+    position: relative;
+    margin-left: 300px;
+}

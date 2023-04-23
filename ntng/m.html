@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="test.js"></script> -->
+    <style>
+      body{
+          background-image: url("./images/img.jpg");
+          background-repeat: no-repeat;
+          /* width: 100%; */
+          height: 100%;
+          background-size: cover;
+      }
+  </style>
+</head>
+<body>
+    <h1 style="text-align: center; position: relative; top:100px;">If you have one, you want to share it. But once you share it,<br> you do not have it. What is it?</h1>
+    <h2 style="text-align: center; position: relative; top:104px;">If you know the answer,enter here</h2>
+    <label for="answer">ans:</label>
+    <!-- <input style="position: relative;  left:550px; top:100px;" type="text" placeholder="enter your answer"> -->
+    <!-- <h3 style="text-align: center; position: relative; top: 104px;"><button onclick="checkans()">Submit</button></h3>
+    <p id="error-message"></p>
+    <div id="success-page" style="display: none;">
+        <h2>Success!</h2>
+        <p>You have successfully logged in.</p>
+      </div> -->
+      <!-- <input type="text" id="answer"> -->
+      <input type="text" placeholder="enter">
+      <button onclick="checkAnswer()">Submit</button>
+    <p id="error-message"></p>
+
+    <!-- This is the page that will be displayed if the answer is correct -->
+    <div id="success-page" style="display: none;">
+      <h2>Correct!</h2>
+      <!-- <p>You have advanced to the next question.</p> -->
+      <button onclick="location.href='9.html'">won</button>
+    </div>
+
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById('answer').value;
+
+        // Check if the answer is correct
+        if (answer === 'secret') {
+          // If the answer is correct, display the success page
+          document.getElementById('success-page').style.display = 'block';
+          document.getElementById('error-message').innerHTML = '';
+        } else {
+          // If the answer is incorrect, display an error message
+          document.getElementById('error-message').innerHTML = 'Incorrect answer. Please try again.';
+          document.getElementById('success-page').style.display = 'none';
+        }
+      }
+    </script>
+    <h2 style="text-align: center; position: relative; top:102px; ">Press next for clues</h2>
+    <h3 style="text-align: center; position: relative; top: 104px;"><a href="3.html"><button>next</button></a></h3>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <div>
+    <label for="input">Enter your answer:</label>
+    <input id="input" type="text" />
+  </div>
+  <div id="answer" style="display: none;">42</div>
+  <button id="check-button">Check answer</button>
+
+  <script>
+    // Get the input and answer elements
+    const inputElement = document.getElementById('input');
+    const answerElement = document.getElementById('answer'); -->
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+    <style>
+      body{
+          background-image: url("./images/img.jpg");
+          background-repeat: no-repeat;
+          /* width: 100%; */
+          height: 100%;
+          background-size: cover;
+      }
+  </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; position: relative; top:100px;">If you have one, you want to share it. But once you share it,<br> you do not have it. What is it?</h1>
+    <!-- <h2 style="text-align: center; position: relative; top:104px;">If you know the answer,enter here</h2> -->
+    <!-- <h2>Question 1:</h2> -->
+    <p style="text-align: center; position: relative; top:104px;">If you know the answer,enter here</p>
+    <input type="text" id="answer" style="text-align: center; position: relative; top:104px; left: 550px;">
+    <button onclick="checkAnswer()" style="text-align: center; position: relative; top:104px; left: 580px;">Submit</button>
+    <p id="error-message"></p>
+
+    <!-- This is the page that will be displayed if the answer is correct -->
+    <div id="success-page" style="display: none;">
+      <!-- <h2>Correct!</h2>
+      <p>You have advanced to the next question.</p> -->
+      <button onclick="location.href='9.html'" style="text-align: center; position: relative; top:104px; left:550px;">Click here to check the answer</button>
+    </div>
+
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById('answer').value;
+
+        // Check if the answer is correct
+        if (answer === 'secret') {
+          // If the answer is correct, display the success page
+          document.getElementById('success-page').style.display = 'block';
+          document.getElementById('error-message').innerHTML = '';
+        } else {
+          // If the answer is incorrect, display an error message
+          document.getElementById('error-message').innerHTML = '<span style="text-align: center; position: relative; top:104px; left:550px;">Incorrect answer. Please try again.</span>';
+          document.getElementById('success-page').style.display = 'none';
+        }
+      }
+    </script>
+    <h2 style="text-align: center; position: relative; top:102px; ">Press next for clues</h2>
+    <h3 style="text-align: center; position: relative; top: 104px;"><a href="3.html"><button>next</button></a></h3>
+  </body>
+</html>
+

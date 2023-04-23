@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="7.css">
+    <style>
+      body{
+          background-image: url("./images/img.jpg");
+          background-repeat: no-repeat;
+          /* width: 100%; */
+          height: 100%;
+          background-size: cover;
+      }
+  </style>
+  </head>
+  <body>
+    <!-- <h1 style="text-align: center; position: relative; top:100px;">If you have one, you want to share it. But once you share it,<br> you do not have it. What is it?</h1>
+    <p style="text-align: center; position: relative; top:104px;">If you know the answer,enter here</p> -->
+    <h1>Yeahhhh!</h1>
+    <h2>Your answers are right!!</h2>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h2>Now,as shown in the puzzle,the answer is of 6-letter word in which from that 5 clues one letter is repeating.<br>Guess that word?</h2>
+    <!-- <form>
+        <h2>Enter your answer:</h2>
+        <input class="inp" type="text" placeholder="Enter word">
+    </form> -->
+    <input type="text" id="answer" style="text-align: center; position: relative; top:150px; left: 550px;"><br><br>
+    <button onclick="checkAnswer()" style="text-align: center; position: relative; top:160px; left: 595px;">Submit</button>
+    <p id="error-message"></p>
+    <div id="success-page" style="display: none;">
+      <button onclick="location.href='9.html'" style="text-align: center; position: relative; top:99px; left:550px;">Click here to check the answer</button>
+    </div>
+
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById('answer').value;
+        if (answer === 'secret') {
+          // If the answer is correct, display the success page
+          document.getElementById('success-page').style.display = 'block';
+          document.getElementById('error-message').innerHTML = '';
+        } else {
+          // If the answer is incorrect, display an error message
+          // document.getElementById('error-message').innerHTML = 'Incorrect answer. Please try again.';
+          document.getElementById('error-message').innerHTML = '<span style="text-align: center; position: relative; top:100px; left:550px;">Incorrect answer. Please try again.</span>';
+          document.getElementById('success-page').style.display = 'none';
+        }
+      }
+    </script>
+    <!-- <h2 style="text-align: center; position: relative; top:102px; ">Press next for clues</h2>
+    <h3 style="text-align: center; position: relative; top: 104px;"><a href="3.html"><button>next</button></a></h3> -->
+  </body>
+</html>
